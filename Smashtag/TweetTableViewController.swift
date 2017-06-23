@@ -149,4 +149,14 @@ class TweetTableViewController: UITableViewController, UITextFieldDelegate
         // occurs in the table by setting section header titles
         return "\(tweets.count-section)"
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Tweet Mentions" {
+            if let mentionsTVC = segue.destination as? MentionsTableViewController {
+                if let senderCell = sender as? TweetTableViewCell {
+                    mentionsTVC.tweet = senderCell.tweet
+                }
+            }
+        }
+    }
 }

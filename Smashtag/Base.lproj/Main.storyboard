@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="17A264c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GYt-j0-pem">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F2073" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GYt-j0-pem">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -86,6 +86,7 @@
                                     <outlet property="tweetProfileImageView" destination="Mtf-hg-dLz" id="r9d-F8-Xp1"/>
                                     <outlet property="tweetTextLabel" destination="Ufy-0E-u3u" id="EVD-go-qNr"/>
                                     <outlet property="tweetUserLabel" destination="CB3-bj-wpE" id="T0r-yI-KcY"/>
+                                    <segue destination="8ul-uI-3Yt" kind="show" identifier="Tweet Mentions" id="7ei-7v-Ozk"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -136,6 +137,23 @@
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Media" rowHeight="128" id="MyL-7X-29X" userLabel="Media" customClass="MediaTableViewCell" customModule="Smashtag" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="375" height="128"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MyL-7X-29X" id="BsJ-0T-eTp">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dZ1-KV-d6c">
+                                            <rect key="frame" x="0.0" y="-11" width="375" height="139"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="mediaImage" destination="dZ1-KV-d6c" id="7bR-cm-8JY"/>
+                                </connections>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="8ul-uI-3Yt" id="biU-mG-gDA"/>
@@ -145,7 +163,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K7E-aX-Qty" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="263" y="-97"/>
+            <point key="canvasLocation" x="488.80000000000001" y="-176.76161919040482"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eeI-3b-0O6">
