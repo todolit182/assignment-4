@@ -83,10 +83,7 @@ class MentionsTableViewController: UITableViewController
         switch(mention) {
         case .media(let mediaItems):
             let mediaItem = mediaItems[indexPath.row]
-            let aspectRatio = mediaItem.aspectRatio
-            let cell = tableView.dequeueReusableCell(withIdentifier: "Media", for: indexPath)
-            let height = CGFloat(cell. * aspectRatio)
-            return height
+            return tableView.frame.size.width / CGFloat(mediaItem.aspectRatio)
         case .mention:
             return UITableViewAutomaticDimension
         }
@@ -96,4 +93,42 @@ class MentionsTableViewController: UITableViewController
         return mentions[section].title
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Show Tweets with Search term" {
+            if let tweetTVC = segue.destination as? TweetTableViewController {
+                if let senderCell = sender as? UITableViewCell {
+                    tweetTVC.searchText = senderCell.textLabel?.text
+                }
+            }
+        }
+        if segue.identifier == "Show Media" {
+            if let senderCell = sender as? MediaTableViewCell {
+                if let url = senderCell.media?.url {
+                    if let imageVC = (segue.destination.contents as? ImageViewController) {
+                        print("\(url)")
+                        imageVC.imageURL = url
+                        //imageVC.title = (sender as? UIButton)?.currentTitle
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+public extension UIViewController
+{
+    // a friendly var we've added to UIViewController
+    // it returns the "contents" of this UIViewController
+    // which, if this UIViewController is a UINavigationController
+    // means "the UIViewController contained in me (and visible)"
+    // otherwise, it just means the UIViewController itself
+    // could easily imagine extending this for UITabBarController too
+    var contents: UIViewController {
+        if let navcon = self as? UINavigationController {
+            return navcon.visibleViewController ?? self
+        } else {
+            return self
+        }
+    }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D63BB81A1EFDC60700085DDA /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63BB8191EFDC60700085DDA /* ImageViewController.swift */; };
 		D66305CC1EFC542F001819D4 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D66305CB1EFC542F001819D4 /* Twitter.framework */; };
 		D66305CD1EFC542F001819D4 /* Twitter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D66305CB1EFC542F001819D4 /* Twitter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D66305D01EFD8581001819D4 /* MediaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66305CF1EFD8581001819D4 /* MediaTableViewCell.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D63BB8191EFDC60700085DDA /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		D66305CB1EFC542F001819D4 /* Twitter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Twitter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D66305CF1EFD8581001819D4 /* MediaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaTableViewCell.swift; sourceTree = "<group>"; };
 		D66BF5F61EFCBB6D00E2E837 /* MentionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentionsTableViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 		EC7D5EBD1E4BF94B009A2E85 /* Smashtag */ = {
 			isa = PBXGroup;
 			children = (
+				D63BB8191EFDC60700085DDA /* ImageViewController.swift */,
 				EC7D5ED11E4BF992009A2E85 /* TweetTableViewController.swift */,
 				EC7D5EC21E4BF94B009A2E85 /* Main.storyboard */,
 				EC7D5ED71E4C0239009A2E85 /* TweetTableViewCell.swift */,
@@ -178,6 +181,7 @@
 				EC7D5EBF1E4BF94B009A2E85 /* AppDelegate.swift in Sources */,
 				EC7D5ED21E4BF992009A2E85 /* TweetTableViewController.swift in Sources */,
 				EC7D5ED81E4C0239009A2E85 /* TweetTableViewCell.swift in Sources */,
+				D63BB81A1EFDC60700085DDA /* ImageViewController.swift in Sources */,
 				D66305D01EFD8581001819D4 /* MediaTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
