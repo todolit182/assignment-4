@@ -93,6 +93,7 @@ class TweetTableViewController: UITableViewController, UITextFieldDelegate
         tableView.rowHeight = UITableViewAutomaticDimension
         // the row height could alternatively be set
         // using the UITableViewDelegate method heightForRowAt
+        title = "Search Twitter"
     }
     
     // MARK: Search Text Field
