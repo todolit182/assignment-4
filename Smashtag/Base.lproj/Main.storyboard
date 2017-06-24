@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F2073" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GYt-j0-pem">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="17A264c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GYt-j0-pem">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -144,7 +144,7 @@
                                 <rect key="frame" x="0.0" y="72" width="375" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MyL-7X-29X" id="BsJ-0T-eTp">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dZ1-KV-d6c">
@@ -251,7 +251,7 @@
             </objects>
             <point key="canvasLocation" x="1509" y="-370"/>
         </scene>
-        <!--Image View Controller-->
+        <!--Image Detail-->
         <scene sceneID="GT9-Jz-iXd">
             <objects>
                 <viewController id="JtV-Ww-S4a" customClass="ImageViewController" customModule="Smashtag" customModuleProvider="target" sceneMemberID="viewController">
@@ -280,7 +280,9 @@
                             <constraint firstAttribute="trailing" secondItem="kbk-XA-QXR" secondAttribute="trailing" id="fD4-tI-qZ5"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="BlC-PO-Isx"/>
+                    <navigationItem key="navigationItem" title="Image Detail" id="BlC-PO-Isx">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="F2W-xt-jqM"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="scrollView" destination="kbk-XA-QXR" id="huM-bC-cxq"/>
                         <outlet property="spinner" destination="br5-23-ZNn" id="wvU-Vk-4ZA"/>

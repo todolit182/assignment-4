@@ -97,7 +97,20 @@ class MentionsTableViewController: UITableViewController
         if segue.identifier == "Show Tweets with Search term" {
             if let tweetTVC = segue.destination as? TweetTableViewController {
                 if let senderCell = sender as? UITableViewCell {
-                    tweetTVC.searchText = senderCell.textLabel?.text
+                    if let str = senderCell.textLabel?.text {
+                        if str.hasPrefix("@") || str.hasPrefix("#") {
+                            tweetTVC.searchText = senderCell.textLabel?.text
+                        } else {
+                            if let url = URL(string: str) {
+                                if #available(iOS 10.0, *) {
+                                    UIApplication.shared.open(url)
+                                } else {
+                                    UIApplication.shared.openURL(url)
+                                }
+                            }
+                        }
+                    }
+                    
                 }
             }
         }
@@ -105,9 +118,7 @@ class MentionsTableViewController: UITableViewController
             if let senderCell = sender as? MediaTableViewCell {
                 if let url = senderCell.media?.url {
                     if let imageVC = (segue.destination.contents as? ImageViewController) {
-                        print("\(url)")
                         imageVC.imageURL = url
-                        //imageVC.title = (sender as? UIButton)?.currentTitle
                     }
                 }
             }

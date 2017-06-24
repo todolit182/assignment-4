@@ -18,6 +18,8 @@ class TweetTableViewController: UITableViewController, UITextFieldDelegate
     // and corresponds to a section in our table
     private var tweets = [Array<Twitter.Tweet>]()
     
+    private var searchList = RecentTweets()
+    
     // public part of our Model
     // when this is set
     // we'll reset our tweets Array
@@ -31,6 +33,8 @@ class TweetTableViewController: UITableViewController, UITextFieldDelegate
             tableView.reloadData()
             searchForTweets()
             title = searchText
+            searchList.recentSearch = searchText
+            print("\(searchList.stack)")
         }
     }
     
