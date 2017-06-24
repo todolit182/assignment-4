@@ -12,7 +12,7 @@ let key = "recentSearches"
 
 class RecentTweets
 {
-    private let maxCount = 8
+    private let maxCount = 100
     var stack = UserDefaults.standard.stringArray(forKey: key) ?? [String]()
     
     var recentSearch: String? {
